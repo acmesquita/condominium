@@ -9,7 +9,8 @@
     "setup": "prisma migrate dev --schema ./main/config/database/schema.prisma"
   },
   "devDependencies": {
-    "jest": "*"
+    "jest": "*",
+    "jest-mock-extended": "^2.0.4"
   },
   "dependencies": {
     "@prisma/client": "^3.10.0",
