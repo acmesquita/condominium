@@ -77,6 +77,7 @@ describe('LocalAddTenantToCodominium', () => {
     const tenantResult = await sut.add(tenant, 'any_codominuim_id')
 
     expect(tenantRepositorySpy.tenant).toEqual(tenant)
+    expect(tenantRepositorySpy.codominuimId).toBe('any_codominuim_id')
     expect(tenantResult.success).toBeTruthy()
     expect(tenantResult.payload.id).not.toBeNull()
   })
