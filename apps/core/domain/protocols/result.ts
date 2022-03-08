@@ -1,15 +1,15 @@
-export abstract class Result {
+export abstract class Result<T> {
   success: boolean
   fail: boolean
-  payload: any
+  payload: T
 
-  resolve(payload: any): void {
+  resolve(payload: T): void {
     this.payload = payload
     this.success = true
     this.fail = false
   }
 
-  reject(payload: any): void {
+  reject(payload: T): void {
     this.payload = payload
     this.fail = true
     this.success = false
