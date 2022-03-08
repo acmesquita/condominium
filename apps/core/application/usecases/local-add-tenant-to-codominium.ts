@@ -13,9 +13,8 @@ export class LocalAddTenantToCodominium {
       throw new InvalidParamsError()
     }
     try {
-      return await this.tenantRepository.create(tenant) 
+      return await this.tenantRepository.create(tenant, codominuimId) 
     } catch (error) {
-      console.log(error)
       throw new UnexpectedError()
     }
   }

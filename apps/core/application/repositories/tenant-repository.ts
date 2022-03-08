@@ -2,7 +2,7 @@ import { Result } from '../../domain/protocols'
 import { Tenant } from '../../domain/entities'
 
 export interface TenantRepository {
-  create(tenant: TenantRepository.InsertModel): Promise<Result<Tenant>>
+  create(tenant: TenantRepository.InsertModel, codominuimId: string): Promise<Result<Tenant>>
 }
 
 export namespace TenantRepository {
