@@ -1,4 +1,4 @@
-export abstract class Result<T> {
+export abstract class Result<T = any> {
   success: boolean
   fail: boolean
   payload: T
