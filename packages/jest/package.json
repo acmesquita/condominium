@@ -1,0 +1,19 @@
+{
+  "name": "jest",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Catharina Mesquita",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jest": "^27.5.1"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.151",
+    "@swc/jest": "^0.2.20",
+    "ts-node": "^10.7.0"
+  },
+  "scripts": {
+    "test": "jest -i --passWithNoTests"
+  }
+}
