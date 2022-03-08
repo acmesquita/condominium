@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Tenant {
+  id          String    @id
+  name        String
+  document    String
+  apartment   Apartment @relation(fields: [apartmentId], references: [id])
+  residents   Decimal   @default(1)
+  havePat     Boolean
+  apartmentId String
+}
+
+model Apartment {
+  id           String     @id
+  description  String
+  condominium  Codominium @relation(fields: [codominiumId], references: [id])
+  codominiumId String
+  tenants      Tenant[]
+}
+
+model Codominium {
+  id   String @id
+  name String
+  apartments Apartment[]
+}
