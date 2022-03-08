@@ -6,15 +6,18 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "@swc/core": "^1.2.151",
+    "@swc/jest": "^0.2.20"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.151",
-    "@swc/jest": "^0.2.20",
     "@types/jest": "^27.4.1",
     "ts-node": "^10.7.0"
   },
   "scripts": {
     "test": "jest -i --passWithNoTests"
-  }
+  },
+  "files": [
+    "jest.congif.ts"
+  ]
 }
