@@ -9,7 +9,7 @@ export namespace TenantRepository {
   export interface InsertModel {
     name: string
     document: string
-    apt: string
+    apartmentId: string
     residents: number
     havePat: boolean
   }
