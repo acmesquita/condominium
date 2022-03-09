@@ -14,6 +14,7 @@ const makeSut = () => {
 		document: 'any_doc',
 		apartmentId: 'any_apt_id'
 	})
+	// @ts-ignore
 	const sut = new PrismaTenantRepository(dbClientTenant)
 
 	return {
