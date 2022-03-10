@@ -1,6 +1,9 @@
-import { app } from "../../../infra/httpServer/express-server"
+import { app, json } from "../../../infra/httpServer/express-server"
+import { routers } from '../../routers'
 
 export const makeHttpServer = () => {
-  // adding routes in here
+  //TODO add cors
+  app.use(json())
+  app.use(routers)
   return app
 }
