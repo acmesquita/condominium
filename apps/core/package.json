@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest -i --passWithNoTests --watch",
     "setup": "prisma migrate dev --schema ./main/config/database/schema.prisma",
-    "start": "ts-node main/config/server.ts"
+    "start": "ts-node main/index.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
